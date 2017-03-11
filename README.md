@@ -1,5 +1,8 @@
 # in-view-js
-Module for capturing element in viewport
+Module for capturing element in viewport on native Javascript.
+
+Demo:
+[CodePen](http://codepen.io/bullet_tooth/pen/XMRNWG)
 
 Usage:
 
