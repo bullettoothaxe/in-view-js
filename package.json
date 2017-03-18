@@ -1,6 +1,6 @@
 {
   "name": "in-view-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module for capturing element in viewport on native Javascript.",
   "main": "dist/in-view-js.min.js",
   "scripts": {

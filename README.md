@@ -24,4 +24,6 @@ inViewInstance.addListeners();
 inViewInstance.removeListeners();
 ```
 
-Feature: Added "overlapEl" for counting overlapping elements (fixed top bars).
+**Feature:** Added "overlapEl" for counting overlapping elements (fixed top bars).
+
+Tested with ES6 modules.
