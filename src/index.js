@@ -1,11 +1,13 @@
 "use strict";
 
-export default class InViewPort {
-  constructor(el, callback) {
-    this.el           = el;
-    this.callback     = callback;
-    this.old_visible  = null;
-    this.handler      = ::this.onVisibilityChange;
+export class InViewPort {
+  constructor($args = {}) {
+    this.el          = $args.element;
+    this.callback    = $args.callback;
+    this.overlapEl   = $args.overlapEl;
+    this.old_visible = null;
+    this.handler     = ::this.onVisibilityChange;
+    this.topDistance = this.getTopDistance();
   }
 
   addListeners() {
@@ -33,12 +35,18 @@ export default class InViewPort {
       }
     }
   }
+  getTopDistance() {
+    let overlapHeight = this.overlapEl ? this.overlapEl.getBoundingClientRect().height : 0,
+        elHeight = this.el.getBoundingClientRect().height || this.el.firstChild.getBoundingClientRect().height;
+
+    return overlapHeight ? (overlapHeight - elHeight) : 0;
+  }
 
   isElementInViewport() {
     let rect = this.el.getBoundingClientRect();
 
     return (
-      rect.top >= 0 &&
+      rect.top >= this.topDistance &&
       rect.left >= 0 &&
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)

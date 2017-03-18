@@ -2,15 +2,20 @@
 Module for capturing element in viewport on native Javascript.
 
 Demo:
-[CodePen](http://codepen.io/bullet_tooth/pen/XMRNWG)
+<a href="http://codepen.io/bullet_tooth/pen/XMRNWG" target="_blank">CodePen</a>
 
 Usage:
 
 ```javascript
-let element = document.getElementById('test'),
-    callback = (isInView) => console.log('is Element visible?', isInView);
+let element   = document.getElementById('test'),
+    callback  = (isInView) => console.log('is Element visible?', isInView),
+    overlapEl = document.getElementById('fixed-top-bar');
 
-let inViewInstance = new InViewPort(element, callback);
+let inViewInstance = new InViewPort({
+    element,
+    callback,
+    overlapEl
+});
 
 inViewInstance.addListeners();
 
@@ -18,3 +23,5 @@ inViewInstance.addListeners();
 
 inViewInstance.removeListeners();
 ```
+
+Feature: Added "overlapEl" for counting overlapping elements (fixed top bars).

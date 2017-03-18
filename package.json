@@ -1,0 +1,24 @@
+{
+  "name": "in-view-js",
+  "version": "1.0.0",
+  "description": "Module for capturing element in viewport on native Javascript.",
+  "main": "dist/in-view-js.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bullettoothaxe/in-view-js.git"
+  },
+  "keywords": [
+    "in-view",
+    "inView",
+    "in-view-js"
+  ],
+  "author": "bullettoothaxe@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bullettoothaxe/in-view-js/issues"
+  },
+  "homepage": "https://github.com/bullettoothaxe/in-view-js#readme"
+}
