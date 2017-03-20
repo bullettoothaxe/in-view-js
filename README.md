@@ -1,12 +1,14 @@
 # in-view-js
 Module for capturing element in viewport on native Javascript.
 
-Demo:
+**Demo:**
 <a href="http://codepen.io/bullet_tooth/pen/XMRNWG" target="_blank">CodePen</a>
 
-Usage:
+**Usage:**
 
 ```javascript
+import { InViewPort } from 'in-view-js';
+
 let element   = document.getElementById('test'),
     callback  = (isInView) => console.log('is Element visible?', isInView),
     overlapEl = document.getElementById('fixed-top-bar');
